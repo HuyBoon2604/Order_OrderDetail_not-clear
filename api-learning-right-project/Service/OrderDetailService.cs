@@ -167,8 +167,9 @@ namespace api_learning_right_project.Service
                     }
                     else
                     {
+                        if(orderDetail.Status == true) { }
                        
-                        orderDetail.Status = true;
+                        orderDetail.Status = false;
                         await this._context.SaveChangesAsync();
                         return true;
                     }
